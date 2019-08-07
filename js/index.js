@@ -43,8 +43,8 @@ $(function(){
 	// });
 	
 	var canvas = document.getElementById('myCanvas');
-	var location_href = 'http://192.168.3.157:8848'
-	var url = location_href + '/E约车/images/out2.ts';
+	var location_href = 'https://xhxiehuan.club/temporary/'
+	var url = location_href + 'images/out2.ts';
 	const player = new JSMpeg.Player(url, 
 		{
 			canvas: canvas,

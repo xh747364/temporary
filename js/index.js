@@ -235,7 +235,7 @@ $(function(){
 			$('.loading-num i').text(count)
 			$('.loading-item').css({'width':count+'%'})
 		}
-	},20)
+	},80)
 	
 	// 进入第二屏
 	$('.next_step').click(function(){

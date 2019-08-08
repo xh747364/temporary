@@ -53,7 +53,7 @@
 						<div class="logo-wrap"><img src="images/logo.png" alt=""></div>
 						<img class="s1_tit animated " src="images/s1_tit.png" alt="">
 						<h3 class="s1_h3 animated ">e约车4.0产品发布活动</h3>
-						<p class="s1_p animated ">2019年8月15日  杭州</p>
+						<p class="s1_p animated ">2019年8月16日  杭州</p>
 						<img class="s1_40 animated " src="images/s1_40.png" alt="">
 						<div class="circle animated ">
 							<span class="c1"></span>
@@ -251,7 +251,15 @@
 <script>
     $('#airtime').on('change',function(){
         var a = (new Date($(this).val())).getTime()/1000
-        $('#arrivalTime').attr('data-value',a)
+				var resultT = new Date(a * 1000) // 时间戳为10位需*1000，时间戳为13位的话不需乘1000
+				var Y = resultT.getFullYear() + '-'
+				var M = (resultT.getMonth() + 1 < 10 ? '0' + (resultT.getMonth() + 1) : resultT.getMonth() + 1) + '-'
+				var D = resultT.getDate() + ' '
+				const h = resultT.getHours() + ':'
+				const m = resultT.getMinutes() + ':'
+				const s = resultT.getSeconds()
+				var aa =  Y + M + D + h + m + s // 时分秒可以根据自己的需求加上
+        $('#arrivalTime').attr('data-value',a).val(aa)
     })
     $('#airinfo').on('change',function(){
         $('#flight').val($(this).val())

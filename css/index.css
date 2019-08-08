@@ -164,8 +164,8 @@ html, body {
 	to { transform: rotate(360deg) }
 }
 .logo-wrap{
-	width: 1.62rem;
-	height: 0.39rem;
+	width: 2.2rem;
+	height: .53rem;
 	margin-bottom: 1rem;
 }
 .logo-wrap img{
@@ -873,6 +873,7 @@ html, body {
 	margin-left: -1.3rem;
 	margin-top: -1.3rem;
 	z-index: 3;
+	pointer-events: none;
 }
 .sing3{
 	position: absolute;
@@ -892,6 +893,7 @@ html, body {
 	-webkit-animation-iteration-count: infinite;/*定义循环资料，infinite为无限次*/
 	/* -webkit-animation-direction: alternate;/*定义动画方式*/ */
 	z-index: 3;
+	pointer-events: none;
 }
 .sing4{
 	position: absolute;
@@ -911,6 +913,7 @@ html, body {
 	-webkit-animation-iteration-count: infinite;/*定义循环资料，infinite为无限次*/
 	/* -webkit-animation-direction: alternate;/*定义动画方式*/ */
 	z-index: 3;
+	pointer-events: none;
 }
 .sing5{
 	position: absolute;
@@ -930,6 +933,7 @@ html, body {
 	-webkit-animation-iteration-count: infinite;/*定义循环资料，infinite为无限次*/
 	/* -webkit-animation-direction: alternate;/*定义动画方式*/ */
 	z-index: 3;
+	pointer-events: none;
 }
 .sign_main .text{font-size:0.48rem;top:.15rem;pointer-events: none;}
 .sign_line {

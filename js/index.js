@@ -44,7 +44,7 @@ $(function(){
 	
 	var canvas = document.getElementById('myCanvas');
 	var location_href = 'http://mued.b2b.cn/cs/eyueche/'
-	var url = location_href + 'images/out2.ts'; 
+	var url = 'images/out2.ts'; 
 	const player = new JSMpeg.Player(url, 
 		{
 			canvas: canvas,

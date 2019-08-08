@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-		<title>E约车</title>
+		<title>e约车</title>
 		<link rel="stylesheet" type="text/css" href="css/base.css"/>
 		<link rel="stylesheet" type="text/css" href="css/animate.css"/>
 		<link rel="stylesheet" type="text/css" href="css/index.css"/>
@@ -52,24 +52,25 @@
 		</div>
 	</body>
 	<script type="text/javascript">
-	    $(".circle").on({  
+	    $(".text").on({  
 	        touchstart: function(e) { 
 	            // 长按事件触发  
-	            timeOutEvent = setTimeout(function() {  
-	                timeOutEvent = 0;  
-	                countDownLoding(); 
-	            }, 400);     
+							countDownLoding();
+	            // timeOutEvent = setTimeout(function() {  
+	            //     timeOutEvent = 0;  
+	            //     countDownLoding(); 
+	            // }, 400);     
 	        },  
 	        touchmove: function() {  
-	            clearTimeout(timeOutEvent);  
-	            timeOutEvent = 0;  
+	            // clearTimeout(timeOutEvent);  
+	            // timeOutEvent = 0;  
 	        },  
 	        touchend: function() {  
-	            clearTimeout(timeOutEvent);  
-	            if (timeOutEvent != 0) {  
-	                alert('你点击了');  
-	            }  
-	            return false;  
+	            // clearTimeout(timeOutEvent);  
+	            // if (timeOutEvent != 0) {  
+	            //     // alert('你点击了');  
+	            // }  
+	            // return false;  
 	        }  
 	    })
 		var countDownLoding = function () {

@@ -43,7 +43,7 @@ $(function(){
 	// });
 	
 	var canvas = document.getElementById('myCanvas');
-	var location_href = 'http://mued.b2b.cn/cs/eyueche'
+	var location_href = 'http://mued.b2b.cn/cs/eyueche/'
 	var url = location_href + 'images/out2.ts'; 
 	const player = new JSMpeg.Player(url, 
 		{
@@ -71,18 +71,19 @@ $(function(){
 		noSwiping : true,
 		noSwipingClass : 'stop-swiping',
 		onTouchStart: function(swiper){
+			swiper.lockSwipeToPrev();
 			if(swiper.isEnd){
 				swiper.lockSwipeToNext();
 			}else{
 				swiper.unlockSwipeToNext();
 			}
-			if(swiper.activeIndex == 1){
-				swiper.lockSwipeToPrev();
-				console.log('锁定前进')
-			}else{
-				swiper.unlockSwipeToPrev();
-				console.log('打开前进')
-			}
+			// if(swiper.activeIndex == 1){
+			// 	swiper.lockSwipeToPrev();
+			// 	console.log('锁定前进')
+			// }else{
+			// 	swiper.unlockSwipeToPrev();
+			// 	console.log('打开前进')
+			// }
 		},
 		onSlideChangeEnd: function(swiper){
 			var k = swiper.activeIndex
@@ -100,7 +101,9 @@ $(function(){
 				$('.s1_40').addClass('fadeInUp')
 				$('.circle').addClass('zoomInDown')
 				$(".session1_1").append($('#mydiv'))
+				swiper.noSwiping = false
 			}else if(k == 2){ // 第二屏
+				swiper.params.onlyExternal = true;
 				var a = 0;
 				timer2 = setInterval(function(){
 					if(a <= 3){
@@ -125,6 +128,7 @@ $(function(){
 						// swiper.slideNext()
 						setTimeout(function(){
 							player.pause()
+							swiper.params.onlyExternal = false;
 							$('.next_step').fadeIn(200)
 						},800)
 						clearInterval(timer2)
@@ -134,12 +138,14 @@ $(function(){
 					a++;
 				},1000)
 			}else if(k == 3){ //第3屏
+				swiper.params.onlyExternal = true;
 				var b = 0;
 				player.play()
 				timer3 = setInterval(function(){
 					b++;
 					if(b >= 9){
 						player.pause()
+						swiper.params.onlyExternal = false;
 						// swiper.slideNext()
 						$('.next_step').fadeIn(200)
 						clearInterval(timer3)
@@ -147,37 +153,43 @@ $(function(){
 				},1000)
 			}else if(k == 4){ //第4屏
 				player.play()
+				swiper.params.onlyExternal = true;
 				var c = 0;
 				timer4 = setInterval(function(){
 					c++;
 					if(c >= 10){
 						// swiper.slideNext()
 						player.pause()
+						swiper.params.onlyExternal = false;
 						$('.next_step').fadeIn(200)
 						clearInterval(timer4)
 					}
 				},1000)
 			}else if(k == 5){ //第5屏
 				player.play()
+				swiper.params.onlyExternal = true;
 				var d = 0;
 				timer5 = setInterval(function(){
 					if(d <= 3){
 						$('.session5 .session2_3').addClass('active1').siblings().removeClass('active')
 						$('.session_5').fadeIn(400).delay(4000)
-						$('.next_step').fadeIn(200)
 					}else if(d >= 4){
+						swiper.params.onlyExternal = false;
+						$('.next_step').fadeIn(200)
 						clearInterval(timer5)
 					}
 					d++;
 				},1000)
 			}else if(k == 6){ //第6屏
+				swiper.params.onlyExternal = true;
 				$('.location_icon').addClass('active')
 				$('.content').addClass('active')
 				$('.place_location_message').addClass('active')
 				var e = 0; 
 				var timer6 = setInterval(function(){
-					if(e>3){
+					if(e>5){
 						$('.next_step').fadeIn(200)
+						swiper.params.onlyExternal = false;
 						clearInterval(timer6)
 					}
 					e++;
@@ -205,7 +217,6 @@ $(function(){
 		onTransitionEnd: function(swiper){
 			slide=swiper.slides.eq(swiper.activeIndex);
 			slide.addClass('now-progress');
-			console.log('asd')
 		},
 	});
 	var timer = setInterval(function(){

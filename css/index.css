@@ -198,6 +198,7 @@ html, body {
 	margin-bottom: 30px;
 	max-width: none;
 	margin-left: -.2rem;
+	pointer-events: none;
 }
 .s1_40{
 	width: 6.57rem;
@@ -239,10 +240,11 @@ html, body {
 	height: 1.44rem;
 	background: url(../images/start_btn.png) no-repeat center;
 	background-size: cover;
-	margin: 0 auto;
+	margin: -.2rem auto 0;
 	position: relative;
 	animation-delay: 1s;/*动画延迟时间*/
 	z-index: 999;
+	transform: scale(1.2);
 }
 @keyframes ripple {
 	0% {
@@ -287,6 +289,7 @@ html, body {
 	opacity: .5;
 	z-index: 1;
 	animation: rotating1 40s linear infinite;
+	pointer-events: none;
 }
 .s1_e2{
 	position: absolute;
@@ -298,6 +301,7 @@ html, body {
 	opacity: .5;
 	z-index: 1;
 	animation: rotating2 40s linear infinite;
+	pointer-events: none;
 }
 /* 第二屏 */
 .session_2{
@@ -367,7 +371,7 @@ html, body {
 .now-progress .session2_9.active1{
 	width: 90%;
 	opacity: 1;
-	animation: s2_animated1 2s cubic-bezier(.13,.68,.75,-0.15);
+	animation: s2_animated1 .4s linear;
 }
 /* 第三屏 */
 .session_3{

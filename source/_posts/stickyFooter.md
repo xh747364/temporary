@@ -50,4 +50,4 @@ footer{
 
 预览
 
-![服务器开小差了-_-!](https://xhxiehuan.club/blog-photolist/photos/stickyFooter.png) 
+![服务器开小差了-_-!](https://xhxiehuan.club/blog-photolist/blog_photos/2019-08-03_stickyFooter.png) 

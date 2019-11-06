@@ -10,8 +10,8 @@
   {% include '_partials/head.swig' %}
   <title>{% block title %}{% endblock %}</title>
   {% include '_third-party/analytics/index.swig' %}
-  <link href="http://cdn.bootcss.com/photoswipe/4.1.1/default-skin/default-skin.css" rel="stylesheet">
-  <link href="http://cdn.bootcss.com/photoswipe/4.1.1/photoswipe.css" rel="stylesheet">
+ <!-- <link href="http://cdn.bootcss.com/photoswipe/4.1.1/default-skin/default-skin.css" rel="stylesheet">
+  <link href="http://cdn.bootcss.com/photoswipe/4.1.1/photoswipe.css" rel="stylesheet"> -->
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="{{ page.lang || page.language || config.language }}">
@@ -29,10 +29,10 @@
           <div class="pswp__ui pswp__ui--hidden">
               <div class="pswp__top-bar">
                   <div class="pswp__counter"></div>
-                  <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
-                  <button class="pswp__button pswp__button--share" title="Share"></button>
-                  <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
-                  <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                  <button class="pswp__button pswp__button--close" title="关闭 (Esc)"></button>
+                  <!-- <button class="pswp__button pswp__button--share" title="Share"></button> -->
+                  <button class="pswp__button pswp__button--fs" title="全屏/还原"></button>
+                  <button class="pswp__button pswp__button--zoom" title="缩放 放大/缩小"></button>
                   <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
                   <!-- element will get class pswp__preloader--active when preloader is running -->
                   <div class="pswp__preloader">

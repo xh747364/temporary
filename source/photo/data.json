@@ -1,12 +1,1 @@
-{
-	"list": [{
-		"arr": {
-			"link": ["2019-08-03_timg.jpg"],
-			"text": ["阿狸"],
-			"month": 3,
-			"type": ["image"],
-			"year": 2017
-		},
-		"date": "2017-03"
-	}]
-}
+{"list": [{"date": "2019-08", "arr": {"year": 2019, "month": 8, "link": ["2019-08-03_timg.jpg"], "text": ["timg"], "type": ["image"]}}]}

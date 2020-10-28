@@ -41,7 +41,7 @@ tags:
 
 # 下载地址
 
-- [点击下载](https://xhxiehuan.club/file/wuxiamusic.apk)
+- [点击下载](https://xhxiehuan.club/assets/file/wuxiamusic.apk)
 
 
 # autojs实现源码

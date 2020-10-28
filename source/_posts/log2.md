@@ -19,7 +19,40 @@ npm install --save-dev @vue/test-utils karma karma-chrome-launcher karma-mocha k
 ```
 ## 在package.json层创建karma.conf.js 内容如下
 
+
+
 ```javascript
+│ app.ts
+│ log.txt
+│ package-lock.json
+│ package.json
+│ README.md
+│ tsconfig.json
+│ yarn.lock
+│ 欢子.todo
+│
+├─assets
+│ ├─css
+│ │ app.9079194c.css
+│ │
+│ ├─img
+│ │ logo.82b9c7a5.png
+│ │
+│ └─js
+│ about.09af784e.js
+│ about.09af784e.js.map
+│ app.0c2971c9.js
+│ app.0c2971c9.js.map
+│ chunk-vendors.d6fd0893.js
+│ chunk-vendors.d6fd0893.js.map
+│
+├─controllers
+│ ApiController.ts
+│ IndexController.ts
+│
+
+
+
 var webpackConfig =  require('@vue/cli-service/webpack.config.js')
 module.exports = function (config) {
     config.set({
